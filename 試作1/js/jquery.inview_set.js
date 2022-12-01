@@ -4,6 +4,11 @@ $('main h2').on('inview', function() {
 	$(this).addClass('linestyle');
 });
 
+//main h6が画面内にきたら、スタイルlinestyleを適用する
+$('main h6').on('inview', function() {
+	$(this).addClass('linestyle');
+});
+
 //upスタイルが画面内にきたら、スタイルupstyleを適用する
 $('.up').on('inview', function() {
 	$(this).addClass('upstyle');

@@ -330,6 +330,59 @@ article h5 {
 	background-position: left bottom;
 	padding: 10px 10px 0px 48px;
 }
+/*main h6のタグ。h2の中央から出現ver。フォントサイズ固定(山川）*/
+main h6 {
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 30px;	
+	position: relative;		
+	letter-spacing: 0.1em;
+	border-bottom: 3px solid #ccc;	
+}
+/*下線スタイル*/
+main h6 .uline {
+	display: inline-block;position: relative;
+	padding: 10px 20px;	
+	bottom: -3px;		
+}
+main h6 .uline::before {
+	content: "";position: absolute;bottom: 0px;left: 0px;width:100%;
+	height: 3px;	
+	background: #0e36ff;	
+	transition: 1s 0.5s;		
+	transform: scaleX(0);		
+	transform-origin: top;
+}
+main h6.linestyle .uline::before {
+	transform: scaleX(1);
+}
+
+/*txtはサブタイトル向け。scroll_upはスクロールに際して出るCSS（山川）*/
+.txt {
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	border-bottom: 3px solid #0e36ff;
+}
+.scroll_up {
+	transition: 0.8s ease-in-out;
+	transform: translateY(30px);
+	opacity: 0;
+  }
+  .scroll_up.show {
+	transform: translateY(0);
+	opacity: 1.0;
+  }
+  .scroll_up2 {
+	transition: 0.8s 0.5s ease-out;
+	transform: translateY(30px);
+	opacity: 0;
+  }
+  .scroll_up2.show {
+	transform: translateY(0);
+	opacity: 1.0;
+  }
+
 
 /*入塾までの流れで使用するCSS(山川）*/
 .number-list {
@@ -383,7 +436,7 @@ article h5 {
 	color: #0e36ff;
 	left: 70px;
   }
-  
+
 
 /*フッター設定
 ---------------------------------------------------------------------------*/

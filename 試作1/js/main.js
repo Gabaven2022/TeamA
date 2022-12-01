@@ -159,3 +159,7 @@ $(function() {
 	$('main h2').wrapInner('<span class="uline">');
 });
 
+//h6の中に下線用のスタイルを作る
+$(function() {
+	$('main h6').wrapInner('<span class="uline">');
+});
