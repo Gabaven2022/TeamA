@@ -313,6 +313,71 @@ main p {
 	margin: 0 20px 30px;	/*上、左右、下へ空けるスペース*/
 }
 
+/*main articleブロックのh5タグ（山川）*/
+article h5 {
+	border-bottom: 2px solid #0e36ff;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 600;
+	background-image: url(../images/service_img1.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding: 10px 10px 0px 48px;
+}
+
+/*入塾までの流れで使用するCSS(山川）*/
+.number-list {
+	counter-reset: number;
+  }
+  .number-list__item {
+	margin-bottom: 10px;
+  }
+  
+  .number-list__item-inner {
+	position: relative;
+	background: #0e36ff;
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.45;
+	padding: 12px 0 12px 125px;
+	font-weight: bold;
+	margin-bottom: 5px;
+  }
+  
+  .number-list__item-inner:before,
+  .number-list__item-inner:after {
+	font-family: 'Lato', sans-serif;
+	position: absolute;
+	top: 50%;
+	font-size: 15px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+  }
+  
+  .number-list__item-inner:before {
+	content: "POINT";
+	background: #207fec;
+	border-radius: 3px;
+	display: block;
+	box-sizing: border-box;
+	padding: 8px 40px 8px 10px;
+	left: 5px;
+  }
+  
+  .number-list__item-inner:after {
+	counter-increment: number;
+	content: counter(number);
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 3px;
+	background: #fff;
+	color: #0e36ff;
+	left: 70px;
+  }
+  
 
 /*フッター設定
 ---------------------------------------------------------------------------*/
