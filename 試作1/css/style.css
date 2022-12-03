@@ -276,6 +276,7 @@ body:not(.home) main {
 
 /*mainブロック内のh2タグ*/
 main h2 {
+	font-size: 36px;
 	margin-bottom: 30px;	/*下に空けるスペース*/
 	position: relative;		/*アニメーションに必要な設定*/
 	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くとる設定*/
@@ -316,6 +317,7 @@ main h3::before {
 
 /*mainブロックのpタグ*/
 main p {
+	font-size: 18px;
 	margin: 0 20px 30px;	/*上、左右、下へ空けるスペース*/
 }
 
@@ -323,11 +325,11 @@ main p {
 article h5 {
 	border-bottom: 2px solid #0e36ff;
 	margin-bottom: 20px;
-	font-size: 18px;
+	font-size: 25px;
 	font-weight: 600;
 	background-image: url(../images/service_img1.jpg);
 	background-repeat: no-repeat;
-	background-position: left bottom;
+	background-position: left bottom 7px;
 	padding: 10px 10px 0px 48px;
 }
 /*main h6のタグ。h2の中央から出現ver。フォントサイズ固定(山川）*/
@@ -357,6 +359,25 @@ main h6.linestyle .uline::before {
 	transform: scaleX(1);
 }
 
+/*guidelineで使うCSS*/
+.centerarea {margin-top: 50%;	}
+.c-space {margin-top: 100px;}
+
+/*装飾なしの中央寄せデカ文字*/
+.txt00 {
+	font-size: 36px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: -20px;/*中央寄りにするため（他でも使いそうなら調整）*/
+}
+/*ｐタグの装飾なしの中央寄せver*/
+.txt01 {
+	font-size: 18px;
+	margin: 0 20px 30px;
+	text-align: center;
+}
+
+
 /*txtはサブタイトル向け。scroll_upはスクロールに際して「下から上に」出るCSS（山川）*/
 .txt {
 	font-size: 24px;
@@ -374,11 +395,20 @@ main h6.linestyle .uline::before {
 	opacity: 1.0;
   }
   .scroll_up2 {
-	transition: 0.8s 0.5s ease-out;
+	transition: 0.8s 1s ease-out;
 	transform: translateY(30px);
 	opacity: 0;
   }
   .scroll_up2.show {
+	transform: translateY(0);
+	opacity: 1.0;
+  }
+  .scroll_up3 {
+	transition: 0.8s 1.5s ease-out;
+	transform: translateY(30px);
+	opacity: 0;
+  }
+  .scroll_up3.show {
 	transform: translateY(0);
 	opacity: 1.0;
   }
@@ -456,11 +486,21 @@ main h6.linestyle .uline::before {
 	  opacity: 0;
   }
 
+/*光りながら出現させるためのCSS*/
+.glowAnime span{opacity: 0;}
+.glowAnime.glow span{ animation:glow_anime_on 1s ease-out forwards; }
+
+@keyframes glow_anime_on{
+  0% { opacity:0; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
+  50% { opacity:1;text-shadow: 0 0 10px #fff,0 0 15px #fff;}
+  100% { opacity:1; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
+}
+
 /*遅延の指定のCSS*/
 /*作ったけど、いまのとこ使わないから後で消すかも*/
-.dly01 {animation-delay: 0.3s;}
-.dly02 {animation-delay: 0.6s;}
-.dly03 {animation-delay: 0.9s;}
+.dly01 {animation-delay: 0.5s;}
+.dly02 {animation-delay: 1s;}
+.dly03 {animation-delay: 1.5s;}
 
 /*入塾までの流れで使用するCSS(山川）*/
 .number-list {
