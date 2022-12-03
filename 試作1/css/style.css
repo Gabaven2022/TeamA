@@ -357,7 +357,7 @@ main h6.linestyle .uline::before {
 	transform: scaleX(1);
 }
 
-/*txtはサブタイトル向け。scroll_upはスクロールに際して出るCSS（山川）*/
+/*txtはサブタイトル向け。scroll_upはスクロールに際して「下から上に」出るCSS（山川）*/
 .txt {
 	font-size: 24px;
 	font-weight: 600;
@@ -383,6 +383,84 @@ main h6.linestyle .uline::before {
 	opacity: 1.0;
   }
 
+
+/*背景色が伸びて出現（右から左）するCSS*/
+  .bgextend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;
+	opacity:0;
+  }
+  
+  @keyframes bgextendAnimeBase{
+	from {
+	  opacity:0;
+	}
+  
+	to {
+	  opacity:1;  
+  }
+  }
+  
+  /*中の要素*/
+  .bgappear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration:1s;
+	animation-delay: 0.6s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+  }
+  
+  @keyframes bgextendAnimeSecond{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+  }
+  }
+  
+  /*右から左*/
+  .bgRLextend::before{
+	animation-name:bgRLextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 150%;
+	background-color: #FFF;
+  }
+  @keyframes bgRLextendAnime{
+	0% {
+	  transform-origin:right;
+	  transform:scaleX(0);
+	}
+	50% {
+	  transform-origin:right;
+	  transform:scaleX(1);
+	}
+	50.001% {
+	  transform-origin:left;
+	}
+	100% {
+	  transform-origin:left;
+	  transform:scaleX(0);
+	}
+  }
+ 
+  .bgappearTrigger,
+  .bgRLextendTrigger{
+	  opacity: 0;
+  }
+
+/*遅延の指定のCSS*/
+/*作ったけど、いまのとこ使わないから後で消すかも*/
+.dly01 {animation-delay: 0.3s;}
+.dly02 {animation-delay: 0.6s;}
+.dly03 {animation-delay: 0.9s;}
 
 /*入塾までの流れで使用するCSS(山川）*/
 .number-list {
@@ -878,6 +956,13 @@ header {
 	display: flex;		/*flexボックスを使う指定*/
 	flex-wrap: wrap;	/*折り返す指定*/
 	justify-content: space-between;	/*並びかたの種類の指定*/
+}
+
+/*list-containerの配置を変えたやつ。（子要素が2個用）（山川）*/
+.list-container2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 /*１個あたりのボックス設定*/
