@@ -120,8 +120,8 @@ header #logo img {display: block;}
 header #logo {
 	margin: 0;
 	background: linear-gradient(150deg, #0e36ff, #001478);/*背景グラデーションdegは角度。*/
-	width: 150px;		/*ロゴの幅*/
-	padding: 40px 20px;	/*ロゴ内の余白。ロゴ画像と背景グラデーションの余白です。*/
+	width: 200px;		/*ロゴの幅*/
+	padding: 14px 15px;	/*ロゴ内の余白。ロゴ画像と背景グラデーションの余白です。*/
 	position: absolute;
 	left: 3%;	/*ヘッダーの左からの配置場所の指定*/
 	top: 0px;	/*ヘッダーの上からの配置場所の指定*/
@@ -590,47 +590,58 @@ footer .pr {display: block;}
 	font-size: 1.2em;
 }
 
-
 /*スライドショー（slickを使用）
 ---------------------------------------------------------------------------*/
 .mainimg {
 	position: relative;
-	margin-top: 15px;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+
+.slick-slide {
+    margin: 10px;	/*スライドショー画像同士の間にあけるスペース*/
+}
+
+.slick-slide img {
+    border-radius: 10px;	/*画像の角丸。丸くカットしない場合は、この１行を削除。*/
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.2);	/*ボックスの影。右へ、下へ、ぼかし幅の順。0,0,0は黒色のことで0.2は色が20%出た状態のこと。*/
 }
 
 /*丸いページナビボタン全体を囲むブロック*/
-ul.slick-dots {
+.slick-dots {
+	text-align: center;
+	width: 100%;
 	margin:0;padding: 0;
 	line-height: 1;
-	width: 100%;
-	text-align: center;
 	position: absolute;
-	bottom: 10px;	/*下からの配置場所指定*/
+	bottom: -15px;	/*下からの配置場所指定*/
 }
 
 /*丸いページナビボタン１個あたりの設定*/
-ul.slick-dots li {
+.slick-dots li {
 	display: inline-block;
 	margin: 0 10px;
 	cursor: pointer;
 }
 
 /*buttonタグ*/
-ul.slick-dots li button {
-	border: none;padding: 0;
+.slick-dots li button {
 	display: block;
+    padding: 0;
+    border: none;
+    border: 1px solid #555;	/*枠線の幅、線種、色*/
 	text-indent: -9999px;	/*デフォルトで文字が出るので画面の外に追い出す指定*/
 	width: 12px;			/*ボタンの幅*/
 	height: 12px;			/*ボタンの高さ*/
 	border-radius: 50%;		/*丸くする指定*/
-	cursor: pointer;		/*クリックで画像へジャンプするので、わかりやすいようhover時にpointerになるように。*/
-	background: #fff;		/*背景色。白。*/	
+	background: #fff;		/*背景色。白。*/
 }
 
 /*buttonのアクティブ時（現在表示されている画像を示すボタン）*/
-ul.slick-dots li.slick-active button {
-	background: #0e36ff;	/*色*/
+.slick-dots li.slick-active button {
+	background: #555;	/*色*/
 }
+
 
 
 /*「お知らせ」ブロック

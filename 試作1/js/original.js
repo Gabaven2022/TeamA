@@ -32,7 +32,7 @@ $(window).scroll(function () {
     var scrollAnimationFunc = function () {
       for (var i = 0; i < scrollAnimationElm.length; i++) {
         var triggerMargin = 20;
-//5pxだけ遅く表示
+//10pxだけ遅く表示
         if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
           scrollAnimationElm[i].classList.add('show');
         }
