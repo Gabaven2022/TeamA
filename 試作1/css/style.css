@@ -556,6 +556,71 @@ main h6.linestyle .uline::before {
   }
 
 
+/*料金プラン設定
+---------------------------------------------*/
+ .pricecards{
+	padding-left:0;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+		  }
+  .pricecard{
+	list-style: none;
+	flex: 0 0 33%;
+	text-align: center;
+	border: 3px solid #0e36ff;
+	padding-bottom: 3rem;
+	box-sizing: border-box;
+	margin:0 auto 3em;
+		  }
+		  .pricecard h1{
+			  
+			  background: #0e36ff;
+			  color: #fff;
+			  padding: 10px;
+			  margin: 0;
+		  }
+		  .pricecard h4 {
+			  font-size: 300%;
+              margin: 0 auto;
+			  padding: 20px;
+		  }
+		  .pricecard p{
+			  margin: 0;
+			  padding: 1rem;
+			  text-align: left;
+		  }
+		  .pricecard a{
+			  padding: 10px 40px;
+			  background: #fb5859;
+			  color: #fff;
+			  text-decoration: none;
+			  border-radius: 3px;
+			  display: inline-block;
+		  }
+  @media screen and (max-width: 600px){
+  .profile_card, .pricecards, .profile_cards {
+	  flex-direction: column;
+	  -webkit-flex-direction: column;
+  }
+	.pricecard, .card_photo {
+	  flex: 0 0 auto;
+	  -webkit-flex: 0 0 auto;
+  }
+  }
+
+  .soft-gloss{
+	background-image: -webkit-linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+	background-image:         linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+	box-shadow: 0 2px 2px 0 rgba(255,255,255,.1) inset,0 2px 10px 0 rgba(255,255,255,.2) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
+	border: 1px solid rgba(0,0,0,.2);
+  }
+
 /*フッター設定
 ---------------------------------------------------------------------------*/
 footer small {font-size: 100%;}
