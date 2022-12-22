@@ -1081,6 +1081,14 @@ header {
 	justify-content: space-around;
 }
 
+/*list-containerの配置を変えたやつ。（子要素が2個用）（山川）*/
+.list-container3 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+
 /*１個あたりのボックス設定*/
 .list {
 	flex-direction: column;			/*子要素を縦並びにする*/
