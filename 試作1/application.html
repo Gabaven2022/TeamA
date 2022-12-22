@@ -47,26 +47,34 @@
 <main>
 
 <section>
-
+<form action="" method="post">
 <h2>お申し込み</h2>
 <p>お申し込みフォームです。お名前、メールアドレス、お問い合わせ詳細をご記入後、<b><font color="#58ACFA">「内容を確認する」</b></font>のボタンを押すと送信されます。<br>
-
+<p><b><font color="#58ACFA">「お申込内容」</b></font>には、お申込みされる予定の人数など、補足情報がありましたらご記入ください。</p>
 <table class="ta1">
 <tr>
-<th>お名前</th>
-<td><input type="text" name="お名前" size="30" class="ws"></td>
+<th>お名前 (※必須）</th>
+<td><input type="text" name="お名前" size="30" class="ws" required></td>
 </tr>
 <tr>
-<th>メールアドレス</th>
-<td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+<th>メールアドレス (※必須）</th>
+<td><input type="text" name="メールアドレス" size="30" class="ws" required></td>
 </tr>
+
 <tr>
-<th>選択プラン</th>
-<td><input type="text" name="選択プラン" size="30" class="ws"></td>
+<th>選択プラン (※必須）</th>
+<td>
+	<input type="radio" name="num_of_inq" value="小学生" id="select_radio1" required><label for="select_radio1">小学生</label>　　	
+	<input type="radio" name="num_of_inq" value="中学生" id="select_radio2" required><label for="select_radio2">中学生</label>
+	<br><br>
+	<input type="checkbox" name="course" value="週1回" id="select_check1"><label for="select_check1">週１回 プラン</label><br>
+	<input type="checkbox" name="course" value="週2回" id="select_check2"><label for="select_check2">週２回 プラン</label><br>
+	<input type="checkbox" name="course" value="通い放題" id="select_check3"><label for="select_check3">通い放題 プラン</label>
+</td>
 </tr>
+
 <tr>
-<th>お申込内容</th>
-<p>お申込みされる予定の人数など、補足情報がありましたらご記入ください。</p>
+<th>お申込内容・詳細</th>
 <td><textarea name="お問い合わせ詳細" cols="30" rows="10" class="wl"></textarea></td>
 </tr>
 </table>
@@ -74,7 +82,7 @@
 <p class="btn">
 <input type="submit" value="内容を確認する">
 </p>
-
+</form>
 </section>
 
 </main>
