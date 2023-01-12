@@ -4,8 +4,9 @@ import os
 for file_name in glob.glob("*.html"):
     with open(file_name,encoding="UTF-8") as f:
          data_lines=f.read()
-    
-    data_lines=data_lines.replace('SAMPLE GUIDELINE','SAMPLE COMPANY')
+
+    data_lines=data_lines.replace('会社名','がばい✕ACADEMY')
+    data_lines=data_lines.replace('社名','がばい✕ACADEMY')
 
 
     with open(file_name, mode="w", encoding="UTF-8") as f:
