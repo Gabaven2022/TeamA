@@ -360,7 +360,7 @@ main h6.linestyle .uline::before {
 }
 
 /*guidelineで使うCSS*/
-.centerarea {margin-top: 25%;	}
+.centerarea {margin-top: 20%;	}
 .c-space {margin-top: 100px;}
 
 /*装飾なしの中央寄せデカ文字*/
