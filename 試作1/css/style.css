@@ -1139,7 +1139,7 @@ header {
 
 }
 
-.head_test {
+.centerarea {
     margin:  0;             /* デフォルトCSS打ち消し */
     font-size:  24px;       /* 文字サイズ指定 */
     position:  relative;    /* 位置調整 */
@@ -1153,3 +1153,47 @@ p {
     margin:  0;             /* デフォルトCSS打ち消し */
     line-height: 2;         /* 行間調整 */
 }
+
+.centerarea {
+    margin:  0;                 /* デフォルトCSS打ち消し */
+    position:  relative;        /* 位置調整 */
+    font-weight:  normal;       /* 文字の太さ調整 */
+    font-size: 30px;            /* 文字サイズ指定 */
+    text-align:  center;        /* 文字位置指定 */
+    margin:  25px 0;            /* 周りの余白指定 */
+    display: inline-block;      /* インラインブロックにする */
+}
+p {
+    margin:  0;                 /* デフォルトCSS打ち消し */
+    line-height: 2;             /* 行間調整 */
+}
+.centerarea:before {
+    content: '';                /* 空の要素を作る */
+    height: 70px;               /* 高さ指定 */
+    width: 150px;                /* 幅指定 */
+    border: solid 1px rgb(247, 245, 243);     /* 枠線指定 */
+    display:  block;            /* ブロック要素にする */
+    position:  absolute;        /* 位置調整 */
+    left:  0;                   /* 位置調整 */
+    top: 0;                     /* 位置調整 */
+    margin:  auto;              /* 位置調整 */
+    z-index: -1;                /* 重なり調整 */
+}
+.centerarea:after {
+    content: '';                /* 空の要素を作る */
+    height: 70px;               /* 高さ指定 */
+    width: 150px;                /* 幅指定 */
+    border: solid 1px #ccc;     /* 枠線指定 */
+    display:  block;            /* ブロック要素にする */
+    position:  absolute;        /* 位置調整 */
+    right:  0;                  /* 位置調整 */
+    bottom:  0;                 /* 位置調整 */
+    margin:  auto;              /* 位置調整 */
+    z-index: -1;                /* 重なり調整 */
+}
+ 
+.centerarea-wrap {
+    padding-bottom:  100px;      /* 余白指定 */
+    text-align:  center;        /* 文字位置指定 */
+}
+
