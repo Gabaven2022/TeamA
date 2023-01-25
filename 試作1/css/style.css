@@ -1212,3 +1212,18 @@ p {
     text-align:  center;        /* 文字位置指定 */
 }
 
+.txt  {
+    margin:  0;             /* デフォルトCSS打ち消し */
+    font-size:  24px;       /* 文字サイズ指定 */
+    position:  relative;    /* 位置調整 */
+    font-weight:  normal;   /* 文字の太さ調整 */
+    background: linear-gradient(to right, rgb(70, 15, 223) 0%,rgba(58, 22, 178, 0.7) 30%,rgba(125,185,232,0) 100%);/* グラデーション指定 */
+    padding:  10px;         /* 余白指定 */
+    margin-bottom: 15px;    /* 周りの余白指定 */
+    border-radius:  2px;    /* 角丸指定 */
+}
+p {
+    margin:  0;             /* デフォルトCSS打ち消し */
+    line-height: 2;         /* 行間調整 */
+}
+
