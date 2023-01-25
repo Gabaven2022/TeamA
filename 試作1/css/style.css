@@ -360,7 +360,6 @@ main h6.linestyle .uline::before {
 }
 
 /*guidelineで使うCSS*/
-.centerarea {margin-top: 20%;	}
 .c-space {margin-top: 100px;}
 
 /*装飾なしの中央寄せデカ文字*/
@@ -1155,7 +1154,7 @@ p {
 
 
 .centerarea {
-    margin:  0;             /* デフォルトCSS打ち消し */
+	margin: 0;	         /* デフォルトCSS打ち消し */
     font-size:  24px;       /* 文字サイズ指定 */
     position:  relative;    /* 位置調整 */
     font-weight:  normal;   /* 文字の太さ調整 */
@@ -1170,12 +1169,12 @@ p {
 }
 
 .centerarea {
-    margin:  0;                 /* デフォルトCSS打ち消し */
+    margin: 0;	                 /* デフォルトCSS打ち消し */
     position:  relative;        /* 位置調整 */
     font-weight:  normal;       /* 文字の太さ調整 */
     font-size: 30px;            /* 文字サイズ指定 */
     text-align:  center;        /* 文字位置指定 */
-    margin:  25px 0;            /* 周りの余白指定 */
+    margin-top: 30%;           /* 周りの余白指定 */
     display: inline-block;      /* インラインブロックにする */
 }
 p {
@@ -1203,7 +1202,7 @@ p {
     position:  absolute;        /* 位置調整 */
     right:  0;                  /* 位置調整 */
     bottom:  0;                 /* 位置調整 */
-    margin:  auto;              /* 位置調整 */
+    margin: auto;	         /* 位置調整 */
     z-index: -1;                /* 重なり調整 */
 }
  
